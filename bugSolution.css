@@ -1,0 +1,28 @@
+The issue can be resolved by setting a width for the parent container, or using a clearfix technique to clear the floats:
+
+**Method 1: Setting Parent Width**
+
+```css
+.container {
+  width: 100%; /* Or a specific width */
+}
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+**Method 2: Clearfix**
+
+```css
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+div {
+  width: 50%;
+  float: left;
+}
+```
+The clearfix method adds a pseudo-element after the container to explicitly clear the floats, forcing the parent element to recognize and accommodate the total width of its floating children.
