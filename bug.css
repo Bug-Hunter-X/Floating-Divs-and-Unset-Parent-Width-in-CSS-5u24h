@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates a common issue that can lead to unexpected behavior:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+This code aims to make two divs side-by-side, each taking up 50% of the width. However, if the parent container doesn't have its width explicitly set, the divs might not behave as expected.  The floating divs will not take into account the parent element's default width. This is because the parent element doesn't have a defined width, and the floating divs will only occupy as much space as is necessary to display their content.
